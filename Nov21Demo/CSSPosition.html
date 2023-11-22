@@ -1,40 +1,81 @@
 <!doctype html>
-<html>
+<html lang="en">
     <head>
         <style>
 
-        #One {
-            background-color: blue;
-            color: white;
-        }
+            #One, #Two, #Three {
+                color: white;
+                border: 2px solid black;
+                padding: 20px;
+                text-align: justify;
+                float: left;
+                width: 20%;
+                flex: 0, 0, 45%;              
+            }
 
-        #Two {
-            background-color: red;
-            color: white;
-        }
+            #One {
+                background-color: blue;
+            }
 
-        #Three {
-            background-color: green;
-            color: white;
-        }
+            #One Img {
+                float:left;
+            }
+
+            #Two {
+                background-color: red;
+            }
+
+            #Three {
+                background-color: green;
+            }
+
+            main {
+                position: relative;
+                background-color: white;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                padding: 5%;
+            }
+
+            ul {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                list-style: none;
+                justify-content: flex-end;
+            }
 
         </style>
     </head>
     <body>
         <header>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="boxmodel.html">Box Model</a></li>
+                    <li><a href="example.html">Example</a></li>
+                </ul>
+            </nav>
         </header>
-        
-        <section>
-            <h1 id="One">My Header</h1>
-        </section>
-        
-        <section>
-            <h1 id="Two">My Header</h1>
-        </section>
+        <main>
 
-        <section>
-            <h1 id="Three">My Header</h1>
-        </section>
+            <section id="One">
+                <h1>One</h1>
+                <img src="images/Volunteering.jpg" width="75">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit quae, placeat impedit, aliquam dolores aliquid quam voluptate dolor illum, ducimus reprehenderit nihil labore. Porro, eaque. Libero animi aliquid exercitationem eius. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod tempora porro et assumenda quasi doloribus unde tenetur debitis, dolorem molestias sed omnis molestiae exercitationem qui iure illo a nam! Autem? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad tenetur ipsam odio deleniti similique eaque quibusdam, maiores, facilis sed cum veniam laborum magnam nobis amet magni quisquam expedita consectetur? Quibusdam? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis necessitatibus harum possimus, distinctio corporis dolorem asperiores, repellendus impedit odit, labore quis numquam. Adipisci consectetur eveniet incidunt fuga beatae cum vel? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus veritatis quia eaque voluptatem cum quae illo blanditiis, harum architecto, amet necessitatibus maxime odit atque, mollitia velit libero laborum rerum magnam? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore ipsum, laborum id error veniam eligendi vero sunt quis vel provident quaerat illum alias ratione. Pariatur voluptas autem magnam molestias alias. Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, sint? Aliquam, ex iusto! Minima aspernatur sint iusto eum fuga vel! Consequatur nulla ad officia, iure earum hic explicabo fugiat recusandae? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse quas possimus mollitia quod sapiente, deserunt quis consectetur, odit iste ab numquam ipsum. Odio autem, adipisci quaerat blanditiis amet commodi placeat.</p>
+            </section>
 
+            <section id="Two">
+                <h1>Two</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit quae, placeat impedit, aliquam dolores aliquid quam voluptate dolor illum, ducimus reprehenderit nihil labore. Porro, eaque. Libero animi aliquid exercitationem eius. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod tempora porro et assumenda quasi doloribus unde tenetur debitis, dolorem molestias sed omnis molestiae exercitationem qui iure illo a nam! Autem? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad tenetur ipsam odio deleniti similique eaque quibusdam, maiores, facilis sed cum veniam laborum magnam nobis amet magni quisquam expedita consectetur? Quibusdam? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis necessitatibus harum possimus, distinctio corporis dolorem asperiores, repellendus impedit odit, labore quis numquam. Adipisci consectetur eveniet incidunt fuga beatae cum vel? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus veritatis quia eaque voluptatem cum quae illo blanditiis, harum architecto, amet necessitatibus maxime odit atque, mollitia velit libero laborum rerum magnam? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore ipsum, laborum id error veniam eligendi vero sunt quis vel provident quaerat illum alias ratione. Pariatur voluptas autem magnam molestias alias. Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, sint? Aliquam, ex iusto! Minima aspernatur sint iusto eum fuga vel! Consequatur nulla ad officia, iure earum hic explicabo fugiat recusandae? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse quas possimus mollitia quod sapiente, deserunt quis consectetur, odit iste ab numquam ipsum. Odio autem, adipisci quaerat blanditiis amet commodi placeat.</p>
+            </section>
+
+            <section id="Three">
+                <h1>Three</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit quae, placeat impedit, aliquam dolores aliquid quam voluptate dolor illum, ducimus reprehenderit nihil labore. Porro, eaque. Libero animi aliquid exercitationem eius. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod tempora porro et assumenda quasi doloribus unde tenetur debitis, dolorem molestias sed omnis molestiae exercitationem qui iure illo a nam! Autem? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad tenetur ipsam odio deleniti similique eaque quibusdam, maiores, facilis sed cum veniam laborum magnam nobis amet magni quisquam expedita consectetur? Quibusdam? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis necessitatibus harum possimus, distinctio corporis dolorem asperiores, repellendus impedit odit, labore quis numquam. Adipisci consectetur eveniet incidunt fuga beatae cum vel? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus veritatis quia eaque voluptatem cum quae illo blanditiis, harum architecto, amet necessitatibus maxime odit atque, mollitia velit libero laborum rerum magnam? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore ipsum, laborum id error veniam eligendi vero sunt quis vel provident quaerat illum alias ratione. Pariatur voluptas autem magnam molestias alias. Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, sint? Aliquam, ex iusto! Minima aspernatur sint iusto eum fuga vel! Consequatur nulla ad officia, iure earum hic explicabo fugiat recusandae? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse quas possimus mollitia quod sapiente, deserunt quis consectetur, odit iste ab numquam ipsum. Odio autem, adipisci quaerat blanditiis amet commodi placeat.</p>
+            </section>
+
+        </main>
     </body>
 </html>
