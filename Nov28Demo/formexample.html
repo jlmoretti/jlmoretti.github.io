@@ -1,0 +1,39 @@
+<!doctype HTML>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Forms">
+        <title>Forms Class</title>
+        <style>
+            label {
+                display: block;
+            }
+        </style>
+    </head>
+    <body>
+        <form action="#submit" method="get">
+            <fieldset>
+                <legend>Label for Fieldset</legend>
+                <label>First Name:<br> <input type="text" name="firstname1" id="firstname1" placeholder="Default"></label>
+                <label for="firstname2">First Name:</label><input type="text" name="firstname2" id="firstname2">
+                <label for="SelectBox">Please Choose Your Education Level</label>
+                <select name="selectBox" id="selectBox" multiple>
+                    <optgroup label="Education">
+                        <option value="none">No Education</option>
+                        <option value="some">High School</option>
+                        <option value="lots">College or Higher Education</option>
+                    </optgroup>
+                    <optgroup label="Professional"></optgroup>
+                        <option value="self">Self Taught</option>
+                        <option value="appr">Apprentice</option>
+                    </optgroup>
+                <select><br>
+                    <label for="color">Favorite Color:</label><input type="color" name="color" id="color">
+                    <input type="date">
+                    <input type="submit">
+                </select>
+            </fieldset>
+        </form>
+    </body>
+</html>
