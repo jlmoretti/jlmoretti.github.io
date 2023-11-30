@@ -1,14 +1,60 @@
 <!doctype HTML>
-    <html lang="en">
-        <head>
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <meta charset="utf-8">
-            <title>Contact Form</title>
-            <style>
-
-            </style>
-            <body>
-                
-            </body>
-        </head>
-    </html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial scale=1.0">
+        <meta name="description" content="Forms">
+        <title>Contact Form</title>
+        <style>
+            label {
+                font-size: 15px;
+                font-family:'Times New Roman', Times, serif
+            }
+            input, textarea {
+                font-size: 15px;
+                border: 0;
+                border-bottom: 1px solid gray;
+                padding: 15px 15;
+                font-family:'Times New Roman', Times, serif
+            }
+            div {
+                display: inline;
+                font-family:'Times New Roman', Times, serif
+            }
+        </style>
+    </head>
+    <body>
+        <form action="#submit" method="get">
+            <fieldset>
+            <legend>Contact Form</legend>
+                <label>First Name: <input type="text" name="firstname1" placeholder="John"></label>
+                <label>Last Name: <input type="text" name="lastname1" placeholder="Doe"></label>
+                <br>
+                <!-- phone input -->
+                <label>Phone Number: <input type="text" name="phone1" placeholder="(123) 456-7890"></label>
+                <br>
+                <!-- email input -->
+                <label>Email Address: <input type="email" name="email1" placeholder="JohnDoe@example.com"></label>
+                <br>
+                <br>
+                <!-- radio buttons -->
+                <legend>Project Scope:</legend>
+                <br>
+                <div><input type="radio" name="option" value="option1"/> Initial Consultation</div>
+                <div><input type="radio" name="option" value="option2"/> Update Current Website</div>
+                <div><input type="radio" name="option" value="option3"/> New Website (1 Page)</div>
+                <br>
+                <div><input type="radio" name="option" value="option4"/> New Website (Multi-Page)</div>
+                <div><input type="radio" name="option" value="option5"/> Other Reason</div>
+                <br>
+                <br>
+                <!-- message input -->
+                <label for="message">Message:</label>
+                    <textarea id="message" rows="1" cols="100" placeholder="Write Message Here"></textarea>
+                <br>
+                <br>
+                <input type="submit">
+            </fieldset>
+        </form>
+    </body>
+</html>
