@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Responsive Design Document</title>
+        <style>
+
+            /* Layout Rules for Responsive Design */
+            /* Mobile */
+        
+            main {
+                display: flex;
+                flex-direction: column;
+            }
+            #one, #two, #three {
+                background-color: blue;
+                margin: 2em;
+                padding: 2em;
+                color: aliceblue;
+            }
+
+            /* Tablet */
+
+            @media screen and (min-wdith: 768px)
+            {
+                article {line-height:150%;}
+            }
+
+            /* Desktop */
+
+                        @media screen and (min-wdith: 1024px)
+            {
+                main {
+                    flex-direction: row;
+                }
+                #one {
+                    flex-basis: 50%;
+                }
+                #two {
+                    background-color: brown;
+                }
+                #three {
+                    flex-basis: 50%;
+                }
+            }
+
+        </style>
+    </head>
+    <body>
+
+            <main>
+                <article id="one">text</article>
+                <article id="two">text</article>
+                <article id="three">text</article>
+            </main>
+    </body>
+</html>
