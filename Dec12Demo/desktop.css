@@ -1,0 +1,15 @@
+main {
+    flex-direction: row;
+}
+#one {
+    background-color: rgb(8, 129, 129);
+    flex-basis: 50%;
+}
+#two {
+    background-color: brown;
+    flex-basis: 25%;
+}
+#three {
+    background-color: aqua;
+    flex-basis: 25%;
+}

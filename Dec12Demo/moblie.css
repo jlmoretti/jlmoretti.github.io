@@ -1,0 +1,12 @@
+ /* Mobile */
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+article {
+    background-color: blue;
+    margin:2em;
+    padding:2em;
+    color: #f0f8ff;
+}
