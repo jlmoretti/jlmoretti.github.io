@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title></title>
+        <script></script>
+        <noscript>This does not support Javascript</noscript>
+        <style>
+            #background_video {
+                position: fixed;
+                left:0px;
+                top:0px;
+                height: auto;
+                width: 100vw;
+                z-index: -100;
+            }
+            header {
+                margin: 20%;
+                background-color: bisque;
+            }
+            main {
+                margin: 0;
+                background-color: white;
+                height: 120vh;
+            }
+
+        </style>
+    </head>
+    <body>
+        <video autoplay loop muted id="background_video">
+            <source src="https://rbsteffes.github.io/media/vinyl-57307(1).mp4" type="video/mp4">
+            Error Text
+        </video>
+
+        <header>
+            <div class="musicbox">
+                <audio controls autoplay>
+                    <source src="https://rbsteffes.github.io/media/relaxed-vlog-night-street-131746.mp3" type="audio/mpeg">
+                    Fallback Text
+                    <img src="Volunteering.jpg" width="100">
+                </audio>
+            </div>
+
+            <nav>
+            </nav>
+
+        </header>
+        <main>
+            <figure>
+                <picture>
+                    <source srcset="images/FromMyPicture.png" media="screen and (min-width:1024px)">
+                    <source srcset="images/prof1.png" media="screen and (min-width: 720px)">
+                    <img src="images/20220207_115900.jpg">
+                </picture>
+                <figcaption>Caption Goes Here</figcaption>
+            </figure>
+        </main>
+    </body>
+</html>
