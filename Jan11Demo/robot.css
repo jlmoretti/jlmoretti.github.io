@@ -4,10 +4,9 @@
     align-items: center;
 }
 #head {
-    width:200px;
-    height:100px;
-    background:blue;
-    align-items: center;
+    width: 200px;
+    height: 100px;
+    background: gray;
 }
 #left-eye {
     height: 25px;
@@ -16,8 +15,8 @@
     border-radius: 50%;
     display: inline-block;
     top: 10px;
-    left: 570px;
-    position: absolute;
+    left: 125px;
+    position: relative;
 }
 #right-eye {
     height: 25px;
@@ -26,25 +25,105 @@
     border-radius: 50%;
     display: inline-block;
     top: 10px;
-    left: 620px;
-    position: absolute;
+    left: 25px;
+    position: relative;
 }
 #nose {
-    width: 0px; 
-    height: 0px; 
+    height: 0px;
+    width: 0px;
     border-left: 18px solid transparent;
     border-right: 18px solid transparent;
     border-bottom: 18px solid white;
     top: 10px;
-    left: 590px;
-    position: absolute;
+    left: 85px;
+    position: relative;
 }
 #mouth {
-    width: 70px;
-    height: 10px;
-    position: absolute;
+    height: 20px;
+    width: 75px;
     background-color: white;
-    top: 80px;
-    left: 575px;
-    position: absolute;
+    display: inline-block;
+    top: 22px;
+    left: 65px;
+    position: relative;
+}
+#body {
+    width: 450px;
+    height: 190px;
+    background: white;
+}
+#left-arm {
+    width: 40px;
+    height: 150px;
+    background:gray;
+    display: inline-block;
+    top: 0px;
+    left: 35px;
+    position: relative;
+}
+#torso {
+    width: 250px;
+    height: 150px;
+    background: gray;
+    display: inline-block;
+    margin: 10px;
+    top: 10px;
+    left: 40px;
+    position: relative;
+}
+#button1 {
+    height: 20px;
+    width: 75px;
+    background-color: red;
+    top: 10px;
+    left: 85px;
+    position: relative;
+}
+#button2 {
+    height: 20px;
+    width: 75px;
+    background-color: orange;
+    top: 15px;
+    left: 85px;
+    position: relative;
+}
+#button3 {
+    height: 20px;
+    width: 75px;
+    background-color: yellow;
+    top: 20px;
+    left: 85px;
+    position: relative;
+}
+#right-arm {
+    width: 40px;
+    height: 150px;
+    background: gray;
+    display: inline-block;
+    top: 0px;
+    left: 45px;
+    position: relative;
+}
+#bottom {
+    width: 450px;
+    height: 200px;
+    background: white;
+}
+#left-leg {
+    width: 40px;
+    height: 150px;
+    background: gray;
+    display: inline-block;
+    top: 0px;
+    left:150px;
+    position: relative;
+}
+#right-leg {
+    width: 40px;
+    height: 150px;
+    background: gray;
+    display: inline-block;
+    top: 0px;
+    left: 200px;
+    position: relative;
 }
