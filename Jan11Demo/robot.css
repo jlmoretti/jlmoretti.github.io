@@ -15,6 +15,9 @@
     background-color: white;
     border-radius: 50%;
     display: inline-block;
+    top: 10px;
+    left: 570px;
+    position: absolute;
 }
 #right-eye {
     height: 25px;
@@ -22,6 +25,9 @@
     background-color: white;
     border-radius: 50%;
     display: inline-block;
+    top: 10px;
+    left: 620px;
+    position: absolute;
 }
 #nose {
     width: 0px; 
@@ -29,4 +35,16 @@
     border-left: 18px solid transparent;
     border-right: 18px solid transparent;
     border-bottom: 18px solid white;
+    top: 10px;
+    left: 590px;
+    position: absolute;
+}
+#mouth {
+    width: 70px;
+    height: 10px;
+    position: absolute;
+    background-color: white;
+    top: 80px;
+    left: 575px;
+    position: absolute;
 }
