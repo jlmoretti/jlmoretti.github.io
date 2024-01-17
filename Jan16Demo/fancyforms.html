@@ -1,0 +1,72 @@
+<!doctype HTML>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial scale=1.0">
+        <meta name="description" content="Forms">
+        <title>Survey Form</title>
+        <style>
+            label {
+                font-size: 15px;
+                font-family:'Times New Roman', Times, serif
+            }
+            input, textarea {
+                font-size: 15px;
+                border: 0;
+                border-bottom: 1px solid gray;
+                padding: 15px 15;
+                font-family:'Times New Roman', Times, serif
+            }
+            article {
+                display: inline;
+                font-family:'Times New Roman', Times, serif
+            }
+            @media only screen and (max-width:500px) {
+                label, input, textarea, article {
+                width: 100%;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <article id="form">
+                <form action="#submit" method="get">
+                    <fieldset>
+                    <legend>Survey Form</legend>
+                        <label>First Name: <input type="text" name="firstname1" placeholder="e.g. John" required></label>
+                        <label>Last Name: <input type="text" name="lastname1" placeholder="e.g. Doe" required></label>
+                        <br>
+                        <!-- phone input -->
+                        <label>Phone Number: <input type="text" name="phone1" placeholder="e.g. (123) 456-7890" required></label>
+                        <!-- email input -->
+                        <label>Email Address: <input type="email" name="email1" placeholder="e.g. JohnDoe@example.com" required></label>
+                        <br>
+                        <br>
+                        <!-- date input-->
+                        <label>When is your birthday? <input type="date" name="date1"></label>
+                        <!-- color input -->
+                        <label>What is your favorite color? <input type="message" name="color1" placeholder="e.g. Red"></label>
+                        <br>
+                        <br>
+                        <!-- radio buttons -->
+                        <legend>Age Demographic:</legend>
+                        <br>
+                        <div><input type="radio" name="option" value="option1"/> Child (>13)</div>
+                        <div><input type="radio" name="option" value="option2"/> Teen (13-19)</div>
+                        <div><input type="radio" name="option" value="option3"/> Adult (20-39)</div>
+                        <div><input type="radio" name="option" value="option4"/> Middle-Aged (40-59)</div>
+                        <div><input type="radio" name="option" value="option5"/> Senior (60+)</div>
+                        <br>
+                        <br>
+                        <!-- message input -->
+                        <label>Anything Else? <input type="message" name="message1" placeholder="e.g. Yes or No?"></label>
+                        <br>
+                        <br>
+                        <input type="submit">
+                    </fieldset>
+                </form>
+            </article>
+        </main>
+    </body>
+</html>
