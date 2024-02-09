@@ -1,0 +1,39 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        label, button {
+            display:block;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        function math() {
+            // Declare variables
+            let ticketCount, taxRate, total;
+            const costPerTicket = 5;
+
+            ticketCount = parseFloat(document.getElementById("ticketCount").value);
+            // To Do: Error Checking
+            taxRate = parseFloat(document.getElementById("taxRate").value);
+            // To Do: Error Checking
+
+            total = (ticketCount * costPerTicket) * (1 + taxRate); // taxRate 0.07
+            alert("Your Total Is: " + total)
+        }
+    </script>
+    
+    <form>
+        <label>Tickets:</label>
+        <input type="number" id="ticketCount">
+        <label>Tax:</label>
+        <input type="tax" id="taxRate" value="0.07">
+
+        <button type="button" onclick="math()">Total</button>
+    </form>
+
+</body>
+</html>

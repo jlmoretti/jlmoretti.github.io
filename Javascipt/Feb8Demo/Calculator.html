@@ -1,0 +1,58 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <button type="button" onclick="clickButton('1')">1</button>
+        <button type="button" onclick="clickButton('2')">2</button>
+        <button type="button" onclick="clickButton('3')">3</button>
+        <br>
+        <button type="button" onclick="clickButton('4')">4</button>
+        <button type="button" onclick="clickButton('5')">5</button>
+        <button type="button" onclick="clickButton('6')">6</button>
+        <br>
+        <button type="button" onclick="clickButton('7')">7</button>
+        <button type="button" onclick="clickButton('8')">8</button>
+        <button type="button" onclick="clickButton('9')">9</button>
+        <br>
+        <button type="button" onclick="clickButton('0')">0</button>
+        <br>
+        <br>
+        <button type="button" onclick="clickButtonPlus()">+</button>
+        <button type="button" onclick="clickButtonMinus()">-</button>
+        <button type="button" onclick="clickButtonMultiply()">*</button>
+        <button type="button" onclick="clickButtonDivide()">/</button>
+        <button type="button" onclick="clickButtonEquals()">=</button>
+
+    </form>
+    <script>
+
+        // Global Variable
+
+        let operandOne="", operandTwo="", bIsFirstNumber=true, total, operation;
+
+        function clickButton(buttonValue){
+            if(bIsFirstNumber)
+            {
+                operandOne += buttonValue;
+            }
+            else{
+                operandTwo += buttonValue;
+            }
+        }
+        function clickButtonPlus()
+        {
+            operation = "+";
+            bIsFirstNumber = false;
+        }
+        function clickButtonEquals()
+        {
+            alert(parseInt(operandOne) + parseInt(operandTwo));
+        }
+
+    </script>
+</body>
+</html>
