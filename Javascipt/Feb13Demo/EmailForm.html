@@ -1,0 +1,36 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        label,button{
+            display: block;
+        }
+    </style>
+
+</head>
+<body>
+
+    <form>
+        <label for="FirstName">First Name</label>
+        <input type="text" id="FirstName">
+        <label for="LastName">Last Name</label>
+        <input type="text" id="LastName">
+        <button type="button" onclick="showName()">Show Email</button>
+    </form>
+
+    <script>
+        function showName(){
+            let firstLetter = document.getElementById("FirstName").value.charAt(0);
+            let lastName = document.getElementById("LastName").value;
+
+            //let address = firstLetter + "." + lastName + "@waketech.edu";
+            let address = `${firstLetter}.${lastName}@waketech.edu`;
+            alert(address);
+        }
+    </script>
+    
+</body>
+</html>
