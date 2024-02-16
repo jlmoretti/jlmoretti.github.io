@@ -1,0 +1,61 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let bTrue = true;
+        if(bTrue) {
+            alert("True");
+        }
+
+        // Javascript will determine where a ";" should go.
+        if(bTrue)
+            alert("True");
+
+        // This is good Javascript
+        if(bTrue)
+        alert("True")
+
+        // This is also good Javascript
+        if(bTrue) alert("True")
+
+        //Additional examples start here:
+        if(bTrue)
+            alert("True")
+        else
+            if(somethingelse)
+                alert("False");
+
+        var age=3;
+
+        let myPrice;
+        if( age <= 4)
+            myPrice = 0;
+        else
+            myPrice = 10;
+
+        myPrice = (age<=4)? 0: 10;
+
+        var discount = 0;
+        vardayOfTHeWeek = "Wed";
+
+        switch(dayOfTheWeek) {
+            case "Wed":
+            discount = 100;
+            break;
+            case "Mon":
+            case "Fri":
+                discount = 10;
+                break;
+            default:
+                discount = 0;
+        }
+        
+
+    
+    </script>
+</body>
+</html>

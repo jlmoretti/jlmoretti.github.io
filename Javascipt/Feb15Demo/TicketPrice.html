@@ -1,0 +1,40 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <label for="Adults">Adult #</label><input id="Adults">
+        <label for="Children">Child #</label><input id="Children">
+        <button type="button" onclick="showPrice()">Total</button>
+
+        <div id="Total"></div>
+
+        <script>
+            const adultPrice = 8.75, ChildrenPrice = 2.50, taxRate = .07;
+            function showPrice() {
+                let adultQty = Number.parseFloat(document.getElementById("Adults").value)
+                childrenQty =  Number.parseFloat(document.getElementById("Children").value)
+
+                if(adultQty <= 0 || Number.isNaN(adultQty)) {
+                    alert("Must have 1 or more adults");
+                    return;
+                }
+                else{
+
+                    if(Number.isNaN(childrenQty))
+                        childrenQty = 0;
+
+                    let myPrice = (adultQty * adultPrice) + (childrenQty * ChildrenPrice);
+                    myPrice *= 1+taxRate;
+                    let myResult = document.getElementById("Total");
+                    myResult.InnerText = "$" + myPrice;
+                }
+            }
+        </script>
+
+    </form>
+</body>
+</html>
