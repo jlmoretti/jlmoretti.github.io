@@ -1,0 +1,35 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <label for="LoanAmout">Loan Amount</label><input type="number" id="LoanAmount">
+        <br>
+        <label for="PaymentAmount">Payment Amount</label><input type="number" id="PaymentAmount">
+        <br>
+        <label for="InterestRate">Interest Rate</label><input type="number" id="InterestRate">
+        <br>
+        <button type="button" onclick="showTable()">Show Table</button>
+    </form>
+
+    <script>
+
+    // Get Variables
+        // For this section, I want to establish what the variables are and assign them a title from the above labels. Lastly, I want to ensure that they stand for a 'value.'
+        function showTable (){
+            let LoanAmount = document.getElementbyId ("LoanAmount").value;
+            let PaymentAmount = document.getElementbyId ("PaymentAmount").value;
+            let InterestRate = document.getElementbyId ("InterestRate").value;
+        }
+    // Start Print Table
+        // For this section, I want to be able to take the LoanAmount and subtract from it the PaymentAmount. Then, I want to charge an interest rate for the remaining balance.
+    // Loop for Each Line
+        // For this section, I want to set up a loop that runs through the equation again, so long as the value is not 0.
+    // Print Close
+        // For this section, if the value is 0, I want the loop to stop and the final result to be the number of times it takes to loop through the LoanAmount until it reaches 0.
+    </script>
+</body>
+</html>
