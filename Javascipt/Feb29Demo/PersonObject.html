@@ -1,0 +1,31 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        const person = {
+            firstName: "Jennifer",
+            lastName: "Moretti",
+            id: 12321,
+            fullname: function() { return this.firstName + " " + this.lastName},
+            "Her Job":"Graphic Designer"
+        }
+
+            document.write(person.fullname() + "<BR>");
+            document.write(person.firstName + "<BR>");
+
+            // alert(person.fullname());
+
+            person.firstName = "Anonymous";
+            document.write(person.fullname() + "<BR>");
+            document.write(person.firstName + "<BR>");
+
+                person = {something:"else"};
+
+    </script>
+</body>
+</html>

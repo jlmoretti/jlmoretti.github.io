@@ -1,0 +1,68 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Declare our variables
+        let loanOriginal,
+        interestRate,
+        paymentAmount,
+        monthlyInterestRate,
+        monthlyInterestCharge;
+
+        // Get values from user
+        loanOriginal = prompt("Loan Amount?");
+        interestRate = prompt("APR?");
+        paymentAmount = prompt("Monthly Payment?");
+
+        // Calculate monthly interest
+        monthlyInterestRate = (interestRate * .01) / 12;
+
+        // Check if loan can be paid down
+            // Figure out how big the interest is
+            monthlyInterestCharge = loanOriginal * monthlyInterestRate;
+
+        // See if the interest is more than the payment
+    if(monthlyInterestCharge <= paymentAmount){
+
+        // Declare calculation variables
+        let currentBalance = loanOriginal,
+            totalInterest = 0;
+            paymentNumber = 1;
+
+        // Start our table
+        document.write("-----------------------<BR>");
+        document.write("#\t\tBalance\t\tTotal Interest<BR>");
+
+        while(currentBalance > paymentAmount){
+            // Update balance
+            currentBalance = currentBalance - paymentAmount;
+
+            // Calculate new interest charge
+            monthlyInterestCharge = currentBalance * monthlyInterestRate;
+
+            // Add interest
+            currentBalance = currentBalance + monthlyInterestCharge;
+
+            totalInterest = totalInterest + monthlyInterestCharge;
+
+            // Print loop for each row
+            document.write(paymentNumber + "\t\t" + currentBalance + "\t\t" + totalInterest + "<BR>");
+
+            paymentNumber = paymentNumber + 1;
+        }
+
+        // Close our table
+        document.write(paymentNumber + "\t\t" + 0 + "\t\t" + totalInterest + "<BR>");
+        document.write("-----------------------<BR>");
+    }
+    else{
+        alert("Payment too low for interest rate.");
+    }
+
+    </script>
+</body>
+</html>

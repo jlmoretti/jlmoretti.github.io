@@ -1,0 +1,83 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        td{
+            justify-content: center;
+            width: 5em;
+        }
+    </style>
+</head>
+<body>
+
+    <form>
+        <label for="orig_loan">Loan Amount</label><input type ="number" id="orig_loan"><br>
+        <label for="interest_rate">APR</label><input type ="number" id="interest_rate"><br>
+        <label for="payment">Payment</label><input type ="number" id="payment"><br>
+        <button onclick = "calcTable()" type="button">Calculate</button>
+    </form>
+
+    <div id = results_table>
+
+    </div>
+
+    <script>
+
+        function calcTable(){
+            // Declare our variables
+            let loanOriginal = Number(document.getElementById("orig_loan").value),
+            interestRate = Number(document.getElementById("interest_rate").value),
+            paymentAmount = Number(document.getElementById("payment").value),
+            // Check if loan can be paid down
+            // Figure out how big the interest is
+            monthlyInterestRate = (interestRate * .01) / 12,
+            monthlyInterestCharge  = loanOriginal * monthlyInterestRate;
+
+            // See if the interest is more than the payment
+            if(monthlyInterestCharge <= paymentAmount){
+
+            // Declare calculation variables
+            let currentBalance = loanOriginal,
+                totalInterest = 0;
+                paymentNumber = 1;
+                tableData = "";
+
+            // Start our table
+            tableData += "<table>" +
+                "<tr><th>#</th><th>Balance</th><th>Interest Paid</th></tr>"
+
+            while(currentBalance > paymentAmount){
+                // Update balance
+                currentBalance -= paymentAmount;
+
+                // Calculate new interest charge
+                monthlyInterestCharge *= monthlyInterestRate;
+
+                // Add interest
+                currentBalance += monthlyInterestCharge;
+
+                totalInterest += monthlyInterestCharge;
+
+                // Print loop for each row
+                tableData += "<tr><td>" + paymentNumber++ + "</td><td>" + currentBalance + "</td><td>" + totalInterest + "</td></tr>";
+            }
+
+            // Close our table
+            tableData += "<tr><td>" + paymentNumber++ + "</td><td>" + 0 + "</td><td>" + totalInterest + "</td></tr>";
+            tableData += "</table>";
+            
+            document.getElementById("results_table").innerHTML = tableData;
+
+            // document.write(tableData);
+            
+            // document.write("a href='ExampleProjectFreePlay.html'>Reload></a>")
+        }
+        else{
+            alert("Payment too low for interest rate.");
+        }
+}
+    </script>
+</body>
+</html>

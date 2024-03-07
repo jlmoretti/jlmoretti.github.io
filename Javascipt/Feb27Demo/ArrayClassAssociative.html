@@ -1,0 +1,46 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        /*
+        let myNewArray = new Array();
+        myNewArray = new Array(10);
+        console.log("Array(10)");
+        console.log(myNewArray);
+
+        myNewArray = new Array(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+        console.log(myNewArray);
+        */
+
+        let myGrades = {
+            "Pete": [100, 97, 0, 29, 100, 100, 100],
+            "Tommy": [100, 97, 100, 29, 100, 100, 100],
+            "John": [100, 97, 50, 23, 0, 100, 100],
+            "Mary": [100, 97, 100, 93, 100, 90, 100]
+            };
+
+        let myTotal = 0, mySubtotal = 0; myGradeCount = 0;
+
+        for(var student in myGrades) {
+
+            mySubtotal = 0;
+            myGradeCount += myGrades[student].length;
+            // Outside Loop: Loops over each student
+            for(var grade = 0; grade < myGrades[student].length; grade++) {
+                // Inner Loop: Loops over each grade
+                mySubtotal += myGrades["Pete"][grade];
+            }
+            
+            myTotal += mySubtotal;
+        }
+
+        alert("Your class average grade is:" + myTotal / myGradeCount);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="fortune_box" class = "fortuneBox"></div>
+    <button onclick = "displayFortune()">My Fortune</button>
+
+    <script>
+        const fortunes = [
+            "Fortune #1",
+            "Fortune #2",
+            "Fortune #3",
+            "Fortune #4",
+            "Fortune #5",
+            "Fortune #6",
+            "Fortune #7",
+            "Fortune #8",
+            "Fortune #9",
+            "Fortune #10",
+        ]
+
+    /* Simplest Version:
+
+        let randIndex = Math.floor(Math.random() * fortunes.length);
+
+    alert(fortunes[randIndex]);
+    */
+
+    // Detailed Version:
+
+    function displayFortune() {
+        let randIndex = Math.floor(Math.random() * fortunes.length);
+        document.getElementById("fortune_box").innerHTML = fortunes[randIndex];
+    }
+
+    displayFortune();
+    
+    </script>
+    
+</body>
+</html>

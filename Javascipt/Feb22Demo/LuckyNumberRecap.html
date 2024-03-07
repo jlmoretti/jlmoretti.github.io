@@ -1,0 +1,27 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Declare variables
+        let targetNumber = Math.floor(Math.random() * 100) + 1;
+            guess = NaN;
+
+        do {
+
+        // Ask for a guess
+        guess = prompt("What's your guess?");
+        }
+        
+        // Check guess
+        while (guess != targetNumber);
+
+        // Say something to user
+        alert ("You won!");
+
+    </script>
+</body>
+</html>

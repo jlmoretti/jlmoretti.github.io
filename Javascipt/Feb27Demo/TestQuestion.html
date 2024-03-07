@@ -1,0 +1,51 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        /*
+
+        Question Options:
+
+        let myNumbers = [10, 20, 30, 40];
+        myNumbers.shift(); // 20, 30, 40
+        myNumbers.push(100); // 20, 30, 40, 100
+        myNumbers.pop(); // 20, 30, 40
+        myNumbers.pop(); // 20, 30
+
+        Question:
+
+        console.log(myNumbers); // [20, 30]
+
+        */
+
+        // Demo:
+
+        const myNumbers = [10, 20, 30, 40];
+        myNumbers.shift(); // 20, 30, 40
+        myNumbers.push(100); // 20, 30, 40, 100
+        myNumbers.pop(); // 20, 30, 40
+        myNumbers.pop(); // 20, 30
+        console.log(myNumbers); // 20, 30
+
+        function addOne(variable) {
+            variable[0] += 23;
+        }
+
+        addOne(myNumbers);
+        alert(myNumbers); // 43, 30
+
+        myNumbers.push(100);
+        myNumbers.push(23);
+        myNumbers.push(19);
+
+        myNewArray = myNumbers.slice(1, 3);
+        alert(myNewArray);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <label for="addTask">New task:</label><input id="addTask" type="text"><br>
+    <button onclick="addTask()" type="button">Add new task!</button><br>
+
+    <label for="delTask">Remove Task Number:</label><input id="delTask" type="number"><br>
+    <button onclick="deleteTask()" type="button">Remove</button><br>
+
+    <button onclick="delFirstTask()" type="button">Complete First</button><br>
+
+    <div id="task_list" class="task_list"></div>
+
+    <script>
+        const taskList= [
+            "Task #1",
+            "Task #2",
+            "Task #3",
+            "Task #4",
+            "Task #5",
+            "Task #6",
+            "Task #7",
+            "Task #8",
+            "Task #9",
+            "Task #10",
+        ];
+
+        function displayTasks() {
+
+            // Loop over all tasks and display in a list
+
+            let myList = document.getElementById("task_list");
+            myListHTML = "<ol>";
+            for(var taskNumber = 0; taskNumber < taskList.length; taskNumber++) {
+                myListHTML += `<li> ${taskList[taskNumber]} </li>`;
+        }
+
+            myListHTML += "</ol>";
+            myList.innerHTML = myListHTML;
+
+        }
+
+        function addTask() {
+            taskList.push(document.getElementById("addTask").value);
+            displayTasks();
+        }
+
+        function deleteTask() {
+            let taskNumber = Number(document.getElementById("delTask").value) -1;
+
+            //Error Checking
+
+            if (taskNumber < 0 || taskNumber > taskList.length)
+                 return;
+            taskList.splice(taskNumber, 1);
+            displayTasks();
+        }
+
+        function delFirstTask() {
+            taskList.shift();
+            displayTasks();
+        }
+
+        // Calling it to Initially Display
+
+        displayTasks();
+
+    </script>
+</body>
+</html>
