@@ -1,0 +1,40 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body onload="DoWhenLoad()">
+
+    <div id="Special" onmouseover="doSomething()" onmouseout="doSomethingElse()">Special</div>
+
+    <script>
+        function DoWhenLoad() {
+            let myElement = document.getElementById("outer");
+            myElement.onclick = doSomething;
+            myElement = document.getElementById("inner");
+            myElement.onclick = doSomethingElse;
+        }
+        function doSomething(event) {
+            let e = event || window.event;
+            let myElement = document.getElementById("Special");
+            myElement.style.backgroundColor = "Red";
+            e.stopPropagation();
+            alert(e.type + " : " + e.target.id);
+        }
+        function doSomethingElse(event) {
+            let e = event || window.event;
+            let myElement = document.getElementById("Special");
+            myElement.style.backgroundColor = "grey";
+            e.stopPropagation();
+            alert(e.type + " : " + e.target.id);
+        }
+    </script>
+
+<div id="outer" style="background-color: grey;padding:10%;">
+    <div id="inner"  style="background-color: lightgrey;padding:10%;">Change Colors</div>
+</div>
+
+</body>
+</html>

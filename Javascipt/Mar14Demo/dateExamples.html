@@ -1,0 +1,30 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        // let myDate = new Date(0); // January 1st, 1970 (Midnight UTC)
+        // alert(myDate.toDateString());
+
+        let time = new Date();
+        let timeCode = time.valueOf();
+        var month = time.getMonth(); // ["January," "February," "March"...]
+        // alert(month);
+        time.setMonth(month + 1);
+        alert(timeCode);
+
+        var difference = time.valueOf() - timeCode; // In Miliseconds
+        difference /= 1000; // Miliseconds to Minutes
+        difference /= 60; // Seconds to Minutes
+        difference /= 60; // Minutes to Hours
+        difference /= 24; // Hours to Days
+
+        alert(difference);
+    </script>
+
+</body>
+</html>

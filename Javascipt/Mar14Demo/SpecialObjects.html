@@ -1,0 +1,34 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <form>
+        <label for="AdultsQuant">Num Adults</label>
+        <input id="AdultsQuant" name="AdultsQuant" type="number" value="1"><br>
+        <label for="ChildsQuant">Num Child</label>
+        <input id="ChildsQuant" name="ChildsQuant" type="number" value="1"><br>
+        <button type="button" onclick="showPrice()">Calculate</button>
+    </form>
+
+    <script>
+        const adultPrice = 8.50;
+        const childPrice = 10.25;
+        const taxRate = 8.75;
+
+        function showPrice() {
+            let adultCount = Number.parseInt(document.getElementById("AdultsQuant").value),
+                childCount = Number.parseInt(document.getElementById("ChildsQuant").value);
+
+        let subtotal = (adultCount * adultPrice) + (childCount * childPrice);
+        let total = ((subtotal * (taxRate/100)) + subtotal).toFixed(2);
+
+        alert(total);
+        }
+    </script>
+
+</body>
+</html>
